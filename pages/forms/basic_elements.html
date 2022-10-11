@@ -294,7 +294,7 @@
                       <input id="inputemail" type="email" class="form-control" id="exampleInputName1" placeholder="Email">
                    
                    <script>
-                     function alphaOnly(event) {
+                     function alpha(event) {
                       var validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
 
                           if (input.value.match(validRegex)) {
@@ -308,24 +308,12 @@
                                   return false;
                                 }
                      }
-                          $('#inputFthrnme').bind('keypress', alphaOnly);
+                          $('#inputemail').bind('keypress', alpha);
                          </script>
                               <br>
 
 
-                              <form action="#" method="post" autocomplete="off">
-                                <div class="formulier">
-                        
-                                    <label for="email">Email:</label>
-                                    <input type="text" id="email" onchange="controle(this.value)"/>
-                        
-                                    <div class="signup">
-                                        <input type="button" value="Ok, Sign up!"  onclick="controle()"/>
-                                    </div>
-                        
-           
-                            </form>
-                        
+                             
 
 
 
