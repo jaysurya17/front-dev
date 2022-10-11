@@ -20,6 +20,7 @@
     <link rel="stylesheet" href="../../css/style.css" />
     <link rel="shortcut icon" href="../../images/favicon.png" />
     <script src="connection.js"></script>
+    <link rel="stylesheet" href="css.css">
 
     <!-- adding require.js for require module of node js into inherit js -->
     <script src="https://requirejs.org/docs/release/2.3.5/minified/require.js"></script>
@@ -192,11 +193,11 @@
         <div class="main-panel">
           <div class="content-wrapper">
             <div class="page-header">
-              <h3 class="page-title"> Form elements </h3>
+
               <nav aria-label="breadcrumb">
                 <ol class="breadcrumb">
                   <li class="breadcrumb-item"><a href="#">Forms</a></li>
-                  <li class="breadcrumb-item active" aria-current="page">Form elements</li>
+
                 </ol>
               </nav>
             </div>
@@ -213,8 +214,7 @@
                       <div class="form-group">
                         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
                         <label for="exampleInputName1">Firstname</label><br>
-                           <input id="input" type="text" class="form-control" id="exampleInputName1" placeholder="first name">
-                        
+                           <input id="inputFname" type="text" class="form-control" id="exampleInputName1" placeholder="First Name">
                         <script>
                           function alphaOnly(event) {
                             var value = String.fromCharCode(event.which);
@@ -222,16 +222,15 @@
                                   return pattern.test(value);
                           }
 
-                               $('#input').bind('keypress', alphaOnly);
+                               $('#inputFname').bind('keypress', alphaOnly);
                               </script>
                               <span id="nameError"></span>
                         <br>
 
-                        <div class="form-group">
+                       
                           <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
                           <label for="exampleInputName1">Middlename</label><br>
-                             <input id="input" type="text" class="form-control" id="exampleInputName1" placeholder="first name">
-                          
+                             <input id="inputMname" type="text" class="form-control" id="exampleInputName1" placeholder="Middle Name">
                           <script>
                             function alphaOnly(event) {
                               var value = String.fromCharCode(event.which);
@@ -239,7 +238,7 @@
                                     return pattern.test(value);
                             }
   
-                                 $('#input').bind('keypress', alphaOnly);
+                                 $('#inputMname').bind('keypress', alphaOnly);
                                 </script>
                                 <span id="nameError"></span>
                           <br>
@@ -248,9 +247,9 @@
                         <label for="exampleInputName1"> Middle Name</label>
                         <input type="text" class="form-control" id="exampleInputName1" placeholder="Middlename">
                       </div> -->
-                      <div class="form-group">
-                        <label for="exampleInputName1">Firstname</label><br>
-                        <input id="input" type="text" class="form-control" id="exampleInputName1" placeholder="first name">
+                     
+                        <label for="exampleInputName1">Last Name</label><br>
+                        <input id="inputLname" type="text" class="form-control" id="exampleInputName1" placeholder="Last name">
                      
                      <script>
                        function alphaOnly(event) {
@@ -259,52 +258,87 @@
                                return pattern.test(value);
                        }
 
-                            $('#input').bind('keypress', alphaOnly);
+                            $('#inputLname').bind('keypress', alphaOnly);
                            </script>
 
                         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
                       </div>
-                      <div class="form-group">
-                        <label for="exampleInputName1"> Father name</label>
-                        <input type="text" class="form-control" id="exampleInputName1" placeholder="Fathername">
-                      </div>
-                      <div class="form-group">
-                        <label for="exampleInputName1"> Mother Name</label>
-                        <input type="text" class="form-control" id="exampleInputName1" placeholder="Mothername">
-                      </div>
-                      <div class="form-group">
-                        <label for="exampleInputName1"> Pancard</label>
-                        <input type="text" class="form-control" id="exampleInputName1" placeholder="Pancard">
-                      </div>
+                        <label for="exampleInputName1">Father's Name</label><br>
+                        <input id="inputFthrnme" type="text" class="form-control" id="exampleInputName1" placeholder="Father name">
                      
-                      <div class="form-group">
-                        <label for="exampleInputName1"> Adharcard</label>
-                        <input type="number" class="form-control" id="exampleInputName1" placeholder="Adharcard">
-                      </div>
-                      <div class="form-group">
-                        <label for="exampleInputName1"> Projects</label>
-                        <input type="text" class="form-control" id="exampleInputName1" placeholder="Projects">
-                      </div>
+                     <script>
+                       function alphaOnly(event) {
+                         var value = String.fromCharCode(event.which);
+                               var pattern = new RegExp(/[a-zA-Z]/i);
+                               return pattern.test(value);
+                       }
+
+                            $('#inputFthrnme').bind('keypress', alphaOnly);
+                           </script>
+
+                                <br>
+                      
                       <div class="form-group">
                         <label for="exampleInputName1"> VID</label>
                         <input type="text" class="form-control" id="exampleInputName1" placeholder="Projects">
                       </div>
                       
                       
-                      <div class="form-group">
+                      <!-- <div class="form-group">
                         <form name="myform" method="post" action="#" onsubmit="return validateemail();">
                         <label for="exampleInputEmail3">Email address</label>
                         <input type="email" class="form-control" id="exampleInputEmail3" placeholder="Email">
                       </form>
-                      </div>
+                      </div> -->
+                      <label for="exampleInputName1">Email</label><br>
+                      <input id="inputemail" type="email" class="form-control" id="exampleInputName1" placeholder="Email">
+                   
+                   <script>
+                     function alphaOnly(event) {
+                      var validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+
+                          if (input.value.match(validRegex)) {
+
+                                  alert("Valid email address!");
+                                  document.form1.text1.focus();
+                                 return true;
+                                } else {
+                                  alert("Invalid email address!");
+                                  document.form1.text1.focus();
+                                  return false;
+                                }
+                     }
+                          $('#inputFthrnme').bind('keypress', alphaOnly);
+                         </script>
+                              <br>
 
 
-                      <script>  
-                        function validateemail()  
-                        {  
+                              <form action="#" method="post" autocomplete="off">
+                                <div class="formulier">
                         
-                        }  
-                        </script>
+                                    <label for="email">Email:</label>
+                                    <input type="text" id="email" onchange="controle(this.value)"/>
+                        
+                                    <div class="signup">
+                                        <input type="button" value="Ok, Sign up!"  onclick="controle()"/>
+                                    </div>
+                        
+           
+                            </form>
+                        
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
